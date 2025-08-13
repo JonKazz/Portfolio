@@ -4,9 +4,9 @@ import './About.css';
 
 const About = () => {
   const skills = {
-    'Programming Languages': ['Java', 'Python', 'C++', 'JavaScript'],
-    'Web Development': ['HTML/CSS', 'React', 'Node.js', 'SQL'],
-    'Tools & Platforms': ['Git', 'VS Code', 'Linux', 'Docker']
+    'Programming Languages': ['Python', 'SQL', 'Java', 'Apex', 'C', 'C++', 'Rust', 'JavaScript', 'CSS', 'HTML5'],
+    'Frameworks & Libraries': ['SpringBoot', 'ReactJS', 'Pandas', 'BeautifulSoup'],
+    'Tools & Platforms': ['AWS (S3, Glue, Lambda, Athena)', 'PostgreSQL', 'Salesforce', 'Git']
   };
 
   const containerVariants = {
@@ -46,10 +46,13 @@ const About = () => {
         >
           <motion.div className="about-text" variants={itemVariants}>
             <p>
-              I'm a dedicated Computer Science student at the University of Kansas with a passion for technology and innovation. My journey in computer science has equipped me with strong problem-solving skills and a solid foundation in software development.
+              I'm a dedicated Computer Science student at the University of Kansas with a passion for technology and innovation. My journey in computer science has equipped me with strong problem-solving skills and a solid foundation in software development across multiple domains.
             </p>
             <p>
-              I'm constantly learning and exploring new technologies to stay current with industry trends. When I'm not coding, you can find me working on personal projects, participating in hackathons, or collaborating with fellow developers.
+              From backend development with Java and SpringBoot to data analysis with Python and Pandas, from cloud computing with AWS to Salesforce development with Apex, I've built a diverse technical toolkit. I'm constantly learning and exploring new technologies to stay current with industry trends.
+            </p>
+            <p>
+              When I'm not coding, you can find me working on personal projects, participating in hackathons, or collaborating with fellow developers to solve complex technical challenges.
             </p>
           </motion.div>
           
