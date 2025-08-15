@@ -1,6 +1,6 @@
 .skills.section {
   padding: 80px 0;
-  background: #0f172a;
+  background: #121212;
 }
 
 .section-heading {
@@ -11,14 +11,14 @@
 .section-heading h2 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #f1f5f9;
+  color: #e0e0e0;
   margin-bottom: 1rem;
 }
 
 .underline {
   width: 80px;
   height: 4px;
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  background: linear-gradient(135deg, #4895ef, #3f8efc);
   margin: 0 auto;
   border-radius: 2px;
 }
@@ -36,7 +36,7 @@
   align-items: center;
   gap: 0.5rem;
   font-size: 0.9rem;
-  color: #cbd5e1;
+  color: #b0b0b0;
 }
 
 .legend-dot {
@@ -66,11 +66,11 @@
 }
 
 .skills-category {
-  background: #1e293b;
+  background: #2a2a2a;
   padding: 2rem;
   border-radius: 4px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  border: 1px solid #334155;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  border: 1px solid #444444;
   transition: all 0.3s ease;
   height: 500px;
   display: flex;
@@ -88,13 +88,13 @@
   gap: 1rem;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid #475569;
+  border-bottom: 2px solid #444444;
 }
 
 .category-icon {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  background: linear-gradient(135deg, #4895ef, #3f8efc);
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -106,7 +106,7 @@
 .category-header h3 {
   font-size: 2rem;
   font-weight: 700;
-  color: #f1f5f9;
+  color: #e0e0e0;
   margin: 0;
 }
 
@@ -138,28 +138,28 @@
 }
 
 .skill-tag[data-level="proficient"] {
-  background: rgba(16, 185, 129, 0.2);
-  color: #6ee7b7;
-  border-color: #10b981;
+  background: rgba(72, 149, 239, 0.2);
+  color: #4895ef;
+  border-color: #4895ef;
 }
 
 .skill-tag[data-level="intermediate"] {
-  background: rgba(59, 130, 246, 0.2);
-  color: #93c5fd;
-  border-color: #3b82f6;
+  background: rgba(63, 142, 252, 0.2);
+  color: #3f8efc;
+  border-color: #3f8efc;
 }
 
 
 
 .skill-tag[data-level="familiar"] {
-  background: rgba(107, 114, 128, 0.2);
-  color: #d1d5db;
-  border-color: #6b7280;
+  background: rgba(83, 144, 217, 0.2);
+  color: #5390d9;
+  border-color: #5390d9;
 }
 
 .skill-tag:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .skill-tag svg {

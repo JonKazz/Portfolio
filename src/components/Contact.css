@@ -1,63 +1,72 @@
 .contact {
   padding: 80px 0;
-  background: #1e293b;
+  background: #1e1e1e;
 }
 
 .contact-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .contact-info h3 {
-  color: #f1f5f9;
+  color: #e0e0e0;
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
 
 .contact-info p {
-  color: #cbd5e1;
+  color: #b0b0b0;
   margin-bottom: 2rem;
   line-height: 1.7;
 }
 
 .contact-details {
   display: flex;
-  flex-direction: column;
+  flex-wrap: nowrap;
   gap: 1.5rem;
+  justify-content: center;
+  overflow-x: auto;
+  padding: 1rem 0;
 }
 
 .contact-item {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  text-align: center;
+  gap: 0.5rem;
+  min-width: 140px;
+  flex-shrink: 0;
 }
 
 .contact-icon {
-  color: #667eea;
-  font-size: 1.2rem;
-  width: 20px;
+  color: #4895ef;
+  font-size: 1.5rem;
+  width: 24px;
+  height: 24px;
 }
 
 .contact-item h4 {
-  color: #f1f5f9;
+  color: #e0e0e0;
   margin-bottom: 0.25rem;
   font-size: 1rem;
 }
 
 .contact-item p {
-  color: #cbd5e1;
+  color: #b0b0b0;
   margin: 0;
   font-size: 0.9rem;
 }
 
 /* Contact Form */
 .contact-form {
-  background: #0f172a;
+  background: #2a2a2a;
   padding: 2rem;
   border-radius: 16px;
-  border: 1px solid #334155;
+  border: 1px solid #444444;
 }
 
 .form-group {
@@ -67,7 +76,7 @@
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #f1f5f9;
+  color: #e0e0e0;
   font-weight: 500;
 }
 
@@ -75,10 +84,10 @@
 .form-group textarea {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid #334155;
+  border: 1px solid #444444;
   border-radius: 8px;
-  background: #1e293b;
-  color: #e2e8f0;
+  background: #1e1e1e;
+  color: #e0e0e0;
   font-size: 1rem;
   transition: border-color 0.3s ease;
 }
@@ -86,12 +95,12 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #4895ef;
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: #64748b;
+  color: #b0b0b0;
 }
 
 .contact-form .btn {
@@ -102,11 +111,16 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .contact-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    padding: 0 1rem;
   }
   
-  .contact-form {
-    padding: 1.5rem;
+  .contact-details {
+    gap: 1rem;
+    justify-content: flex-start;
+  }
+  
+  .contact-item {
+    min-width: 120px;
+    padding: 1rem;
   }
 } 

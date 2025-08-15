@@ -1,6 +1,6 @@
 .hero {
   padding: 120px 0 80px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #4895ef 0%, #5390d9 100%);
   color: white;
   min-height: 100vh;
   display: flex;
@@ -24,7 +24,7 @@
 }
 
 .highlight {
-  color: #fbbf24;
+  color: #e0e0e0;
 }
 
 .hero-subtitle {

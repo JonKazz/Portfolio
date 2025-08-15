@@ -1,25 +1,25 @@
 .projects {
   padding: 80px 0;
-  background: #0f172a;
+  background: #1e1e1e;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
 }
 
 .project-card {
-  background: #1e293b;
+  background: #2a2a2a;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
-  border: 1px solid #334155;
+  border: 1px solid #444444;
 }
 
 .project-image {
-  height: 200px;
+  height: 250px;
   overflow: hidden;
   position: relative;
 }
@@ -39,11 +39,11 @@
 .project-title {
   font-size: 1.3rem;
   margin-bottom: 1rem;
-  color: #f1f5f9;
+  color: #e0e0e0;
 }
 
 .project-description {
-  color: #cbd5e1;
+  color: #b0b0b0;
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
@@ -56,8 +56,8 @@
 }
 
 .tech-tag {
-  background: #334155;
-  color: #e2e8f0;
+  background: #444444;
+  color: #e0e0e0;
   padding: 0.3rem 0.8rem;
   border-radius: 15px;
   font-size: 0.8rem;
@@ -73,21 +73,21 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #667eea;
+  color: #4895ef;
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
   padding: 0.5rem 1rem;
-  border: 1px solid #334155;
+  border: 1px solid #444444;
   border-radius: 8px;
-  background: rgba(51, 65, 85, 0.3);
+  background: rgba(68, 68, 68, 0.3);
 }
 
 .project-link:hover {
   color: #ffffff !important;
-  border-color: #667eea !important;
-  background: #667eea !important;
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2) !important;
+  border-color: #4895ef !important;
+  background: #4895ef !important;
+  box-shadow: 0 4px 12px rgba(72, 149, 239, 0.3) !important;
 }
 
 .demo-btn {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaUserGraduate } from 'react-icons/fa';
+
 import './Hero.css';
 
 const Hero = () => {
@@ -38,14 +38,7 @@ const Hero = () => {
             Computer Science Student at the University of Kansas
           </motion.p>
           
-          <motion.p
-            className="hero-description"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            Passionate about software development, problem-solving, and creating innovative solutions. Graduating May 2027.
-          </motion.p>
+      
           
           <motion.div
             className="hero-buttons"
@@ -63,11 +56,11 @@ const Hero = () => {
             </motion.button>
             <motion.button
               className="btn btn-secondary"
-              onClick={() => scrollToSection('contact')}
+              onClick={() => scrollToSection('about')}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Get In Touch
+              About Me
             </motion.button>
           </motion.div>
         </motion.div>

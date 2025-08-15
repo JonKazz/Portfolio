@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaDownload, FaEye } from 'react-icons/fa';
 import './About.css';
 
 const About = () => {
@@ -41,13 +42,13 @@ const About = () => {
         >
           <motion.div className="about-text" variants={itemVariants}>
             <p>
-              I'm a dedicated Computer Science student at the University of Kansas with a passion for data engineering and technology innovation. My academic journey has equipped me with strong problem-solving skills and a comprehensive foundation in data science, machine learning, and software development.
+              I'm a junior Computer Science student at the University of Kansas with 4 years of programming experience and a passion for data engineering. My journey in technology has equipped me with strong problem-solving skills and a comprehensive foundation in software development.
             </p>
             <p>
-              My expertise lies in data engineering, where I have hands-on experience in data scraping, storage, pipeline development, and data science. I've worked extensively with Python for data manipulation, built robust data pipelines using modern tools, and applied fundamental machine learning concepts to real-world problems. My experience spans from web scraping and data collection to building scalable data storage solutions and creating analytical dashboards.
+              My expertise lies in data engineering, where I have hands-on experience in data scraping, pipeline development, data analysis, and storage solutions. I've worked extensively with Python for data manipulation, built robust data pipelines using modern tools, and applied fundamental machine learning concepts to real-world problems. My experience spans from web scraping and data collection to building scalable data storage solutions and creating analytical dashboards.
             </p>
             <p>
-              I'm constantly expanding my technical toolkit, exploring new data technologies, and staying current with industry trends in data engineering and analytics.
+              I spent a semester studying abroad in Europe, where I had the incredible opportunity to visit 18 countries while maintaining perfect grades. This experience not only broadened my global perspective but also demonstrated my ability to balance academic excellence with exploration and cultural immersion.
             </p>
           </motion.div>
           
@@ -64,7 +65,7 @@ const About = () => {
                 </div>
               </div>
               <div className="relevant-classes">
-                <h5>Relevant Classes:</h5>
+                <h5>Key Classes:</h5>
                 <div className="classes-grid">
                   <span className="class-tag">Data Structure and Algorithms</span>
                   <span className="class-tag">Programming Paradigms</span>
@@ -86,11 +87,27 @@ const About = () => {
                 </div>
               </div>
               <div className="relevant-classes">
-                <h5>Relevant Classes:</h5>
+                <h5>Key Classes:</h5>
                 <div className="classes-grid">
                   <span className="class-tag">Data Management</span>
                   <span className="class-tag">Data Mining and Discovery</span>
                   <span className="class-tag">Intro to Artificial Intelligence</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="resume-box">
+              <div className="resume-content">
+                <h3>My Resume: </h3>
+                <div className="resume-actions">
+                  <a href="/resume.pdf" className="btn btn-preview" target="_blank" rel="noopener noreferrer">
+                    <FaEye />
+                    Preview
+                  </a>
+                  <a href="/resume.pdf" className="btn btn-download" download="">
+                    <FaDownload />
+                    Download PDF
+                  </a>
                 </div>
               </div>
             </div>

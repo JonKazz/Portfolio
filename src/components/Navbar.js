@@ -87,15 +87,7 @@ const Navbar = () => {
               Projects
             </a>
           </li>
-          <li className="nav-item">
-            <a
-              href="#contact"
-              className="nav-link"
-              onClick={() => scrollToSection('contact')}
-            >
-              Contact
-            </a>
-          </li>
+
         </ul>
 
         <div className="hamburger" onClick={toggleMenu}>
