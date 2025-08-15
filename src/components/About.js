@@ -3,11 +3,6 @@ import { motion } from 'framer-motion';
 import './About.css';
 
 const About = () => {
-  const skills = {
-    'Programming Languages': ['Python', 'SQL', 'Java', 'Apex', 'C', 'C++', 'Rust', 'JavaScript', 'CSS', 'HTML5'],
-    'Frameworks & Libraries': ['SpringBoot', 'ReactJS', 'Pandas', 'BeautifulSoup'],
-    'Tools & Platforms': ['AWS (S3, Glue, Lambda, Athena)', 'PostgreSQL', 'Salesforce', 'Git']
-  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -46,40 +41,58 @@ const About = () => {
         >
           <motion.div className="about-text" variants={itemVariants}>
             <p>
-              I'm a dedicated Computer Science student at the University of Kansas with a passion for technology and innovation. My journey in computer science has equipped me with strong problem-solving skills and a solid foundation in software development across multiple domains.
+              I'm a dedicated Computer Science student at the University of Kansas with a passion for data engineering and technology innovation. My academic journey has equipped me with strong problem-solving skills and a comprehensive foundation in data science, machine learning, and software development.
             </p>
             <p>
-              From backend development with Java and SpringBoot to data analysis with Python and Pandas, from cloud computing with AWS to Salesforce development with Apex, I've built a diverse technical toolkit. I'm constantly learning and exploring new technologies to stay current with industry trends.
+              My expertise lies in data engineering, where I have hands-on experience in data scraping, storage, pipeline development, and data science. I've worked extensively with Python for data manipulation, built robust data pipelines using modern tools, and applied fundamental machine learning concepts to real-world problems. My experience spans from web scraping and data collection to building scalable data storage solutions and creating analytical dashboards.
             </p>
             <p>
-              When I'm not coding, you can find me working on personal projects, participating in hackathons, or collaborating with fellow developers to solve complex technical challenges.
+              I'm constantly expanding my technical toolkit, exploring new data technologies, and staying current with industry trends in data engineering and analytics.
             </p>
           </motion.div>
           
-          <motion.div className="skills" variants={itemVariants}>
-            <h3>Skills & Technologies</h3>
-            <div className="skills-grid">
-              {Object.entries(skills).map(([category, skillList]) => (
-                <motion.div
-                  key={category}
-                  className="skill-category"
-                  variants={itemVariants}
-                >
-                  <h4>{category}</h4>
-                  <div className="skill-tags">
-                    {skillList.map((skill, index) => (
-                      <motion.span
-                        key={skill}
-                        className="skill-tag"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        {skill}
-                      </motion.span>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
+          <motion.div className="education" variants={itemVariants}>
+            <div className="education-item">
+              <div className="education-header">
+                <div className="university-logo">
+                  <img src="/images/ku-logo.png" alt="University of Kansas" />
+                </div>
+                <div className="education-info">
+                  <h4>University of Kansas, United States</h4>
+                  <p className="degree">Bachelor of Science in Computer Science</p>
+                  <p className="details">August 2023 - May 2027 • GPA: 4.0</p>
+                </div>
+              </div>
+              <div className="relevant-classes">
+                <h5>Relevant Classes:</h5>
+                <div className="classes-grid">
+                  <span className="class-tag">Data Structure and Algorithms</span>
+                  <span className="class-tag">Programming Paradigms</span>
+                  <span className="class-tag">Operating Systems</span>
+                  <span className="class-tag">Computer Systems Architecture</span>
+                  <span className="class-tag">Theory of Computing</span>
+                </div>
+              </div>
+            </div>
+            <div className="education-item">
+              <div className="education-header">
+                <div className="university-logo">
+                  <img src="/images/tu-graz-logo.png" alt="Graz Technical University" />
+                </div>
+                <div className="education-info">
+                  <h4>Graz Technical University, Austria</h4>
+                  <p className="degree">Computer Engineering (Study Abroad)</p>
+                  <p className="details">March 2025 - July 2025 • GPA: 4.0</p>
+                </div>
+              </div>
+              <div className="relevant-classes">
+                <h5>Relevant Classes:</h5>
+                <div className="classes-grid">
+                  <span className="class-tag">Data Management</span>
+                  <span className="class-tag">Data Mining and Discovery</span>
+                  <span className="class-tag">Intro to Artificial Intelligence</span>
+                </div>
+              </div>
             </div>
           </motion.div>
         </motion.div>

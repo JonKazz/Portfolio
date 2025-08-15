@@ -78,13 +78,13 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <motion.div
-            className="profile-placeholder"
+          <motion.img
+            src="/images/headshot2.jpeg"
+            alt="Jonathan Kazmaier"
+            className="profile-image"
             whileHover={{ scale: 1.05, rotate: 5 }}
             transition={{ duration: 0.3 }}
-          >
-            <FaUserGraduate />
-          </motion.div>
+          />
         </motion.div>
       </div>
     </section>

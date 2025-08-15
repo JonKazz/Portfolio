@@ -1,36 +1,38 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { FaCode, FaMobile, FaLaptopCode, FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FaCode, FaMobile, FaLaptopCode, FaGithub, FaPlay, FaTimes } from 'react-icons/fa';
 import './Projects.css';
 
 const Projects = () => {
+  const [selectedDemo, setSelectedDemo] = useState(null);
+
   const projects = [
     {
       id: 1,
-      title: 'Project Name 1',
-      description: 'A brief description of your first project. Explain what it does, what technologies you used, and what you learned.',
-      technologies: ['Java', 'Spring Boot', 'MySQL'],
-      github: '#',
-      demo: '#',
-      icon: FaCode
+      title: 'Algorithmic Pathfinder',
+      description: 'A visual sandbox for learning BFS, DFS, and A* pathfinding algorithms. Built in Rust with Macroquad.',
+      technologies: ['Rust', 'Macroquad'],
+      github: 'https://github.com/JonKazz/AlgorithmicPathfinder',
+      demoGif: '/images/rustalgo-demo.gif',
+      headerImage: '/images/rustalgo-header.png'
     },
     {
       id: 2,
       title: 'Project Name 2',
       description: 'Description of your second project. Highlight the key features and your role in development.',
       technologies: ['Python', 'Django', 'PostgreSQL'],
-      github: '#',
-      demo: '#',
-      icon: FaMobile
+      github: 'https://github.com/yourusername/project2-repo',
+      demoGif: '/images/project2-demo.gif',
+      headerImage: '/images/project2-header.jpg'
     },
     {
       id: 3,
-      title: 'Project Name 3',
-      description: 'Description of your third project. Focus on the problem it solves and your technical achievements.',
+      title: 'Binary Tree Visualizer',
+      description: 'A visual sandbox to create, edit, and traverse binary trees for learning purposes. Made using pygame.',
       technologies: ['JavaScript', 'React', 'Node.js'],
-      github: '#',
-      demo: '#',
-      icon: FaLaptopCode
+      github: 'https://github.com/JonKazz/BinaryTreeVisualizer',
+      demoGif: '/images/btv-demo.gif',
+      headerImage: '/images/btv-header.png'
     }
   ];
 
@@ -74,13 +76,14 @@ const Projects = () => {
               key={project.id}
               className="project-card"
               variants={cardVariants}
-              whileHover={{ y: -10 }}
               transition={{ duration: 0.3 }}
             >
               <div className="project-image">
-                <div className="project-placeholder">
-                  <project.icon />
-                </div>
+                <img 
+                  src={project.headerImage} 
+                  alt={project.title}
+                  className="project-header-img"
+                />
               </div>
               <div className="project-content">
                 <h3 className="project-title">{project.title}</h3>
@@ -96,15 +99,52 @@ const Projects = () => {
                   <a href={project.github} className="project-link">
                     <FaGithub /> Code
                   </a>
-                  <a href={project.demo} className="project-link">
-                    <FaExternalLinkAlt /> Live Demo
-                  </a>
+                  <button 
+                    className="project-link demo-btn"
+                    onClick={() => setSelectedDemo(project.demoGif)}
+                  >
+                    <FaPlay /> Live Demo
+                  </button>
                 </div>
               </div>
             </motion.div>
           ))}
         </motion.div>
       </div>
+
+      {/* Demo Modal */}
+      <AnimatePresence>
+        {selectedDemo && (
+          <motion.div
+            className="demo-modal-overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedDemo(null)}
+          >
+            <motion.div
+              className="demo-modal"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="demo-modal-header">
+                <h3>Live Demo</h3>
+                <button 
+                  className="close-btn"
+                  onClick={() => setSelectedDemo(null)}
+                >
+                  <FaTimes />
+                </button>
+              </div>
+              <div className="demo-content">
+                <img src={selectedDemo} alt="Project Demo" />
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
