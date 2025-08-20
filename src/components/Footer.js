@@ -5,7 +5,7 @@ import './Footer.css';
 
 const Footer = () => {
   const contactInfo = [
-    { icon: FaEnvelope, label: 'Email', value: 'jon.kazmaier3@gmail.com', url: 'mailto:jonathan.kazmaier@example.com' },
+    { icon: FaEnvelope, label: 'Email', value: 'jon.kazmaier2@gmail.com', url: 'mailto:jon.kazmaier2@gmail.com' },
     { icon: FaGithub, label: 'GitHub', value: 'github.com/JonKazz', url: 'https://github.com/JonKazz' },
     { icon: FaLinkedin, label: 'LinkedIn', value: 'linkedin.com/in/jon-kazmaier', url: 'https://www.linkedin.com/in/jon-kazmaier/' },
     { icon: FaMapMarkerAlt, label: 'Location', value: 'Kansas City, Missouri' }

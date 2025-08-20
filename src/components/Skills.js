@@ -14,46 +14,37 @@ import './Skills.css';
 const Skills = () => {
   const skills = {
     'Languages & Core Tech': [
-      { name: 'Python', icon: FaPython, level: 'intermediate' },
-      { name: 'SQL', icon: FaDatabase, level: 'intermediate' },
-      { name: 'SOQL', icon: FaDatabase, level: 'intermediate' },
-      { name: 'Java', icon: FaJava, level: 'proficient' },
-      { name: 'JavaScript', icon: FaJs, level: 'proficient' },
+      { name: 'Python', icon: FaPython, level: 'proficient' },
+      { name: 'SQL', icon: FaDatabase, level: 'proficient' },
+      { name: 'SOQL', icon: FaDatabase, level: 'proficient' },
+      { name: 'Java', icon: FaJava, level: 'intermediate' },
+      { name: 'JavaScript', icon: FaJs, level: 'intermediate' },
       { name: 'Apex', icon: FaCode, level: 'intermediate' },
       { name: 'CSS', icon: FaCss3Alt, level: 'proficient' },
       { name: 'HTML', icon: FaHtml5, level: 'proficient' },
-      { name: 'C', icon: FaCode, level: 'proficient' },
-      { name: 'C++', icon: FaCode, level: 'proficient' },
-      { name: 'Rust', icon: FaCode, level: 'familiar' }
+      { name: 'C', icon: FaCode, level: 'familiar' },
+      { name: 'C++', icon: FaCode, level: 'familiar' },
+      { name: 'Rust', icon: FaCode, level: 'intermediate' }
     ],
     'Frameworks & Libraries': [
-      { name: 'Spring Boot', icon: FaJava, level: 'proficient' },
-      { name: 'Pandas', icon: FaPython, level: 'intermediate' },
-      { name: 'Beautiful Soup', icon: FaPython, level: 'intermediate' },
-      { name: 'Selenium', icon: FaSearch, level: 'intermediate' },
+      { name: 'Spring Boot', icon: FaJava, level: 'intermediate' },
+      { name: 'Pandas', icon: FaPython, level: 'proficient' },
+      { name: 'Beautiful Soup', icon: FaPython, level: 'proficient' },
+      { name: 'Selenium', icon: FaSearch, level: 'familiar' },
       { name: 'SQLAlchemy', icon: FaDatabase, level: 'intermediate' },
       { name: 'NumPy', icon: FaPython, level: 'intermediate' },
       { name: 'Scikit Learn', icon: FaBrain, level: 'intermediate' },
-      { name: 'XGBoost', icon: FaChartLine, level: 'familiar' },
-      { name: 'ReactJS', icon: FaJs, level: 'proficient' }
-    ],
-    'Data Science & Analytics': [
-      { name: 'Linear Regression', icon: FaChartLine, level: 'proficient' },
-      { name: 'K-Means Clustering', icon: FaProjectDiagram, level: 'familiar' },
-      { name: 'Random Forest', icon: FaRandom, level: 'familiar' },
-      { name: 'Reinforcement Learning', icon: FaBrain, level: 'familiar' },
-      { name: 'Jupyter Notebooks', icon: FaPython, level: 'proficient' }
+      { name: 'ReactJS', icon: FaJs, level: 'intermediate' }
     ],
     'DevOps & Tools': [
       { name: 'Git', icon: FaGithub, level: 'proficient' },
       { name: 'GitHub', icon: FaGithub, level: 'proficient' },
       { name: 'Cursor', icon: FaCode, level: 'proficient' },
-      { name: 'Salesforce', icon: FaCloud, level: 'intermediate' },
+      { name: 'Salesforce', icon: FaCloud, level: 'familiar' },
       { name: 'PostgreSQL', icon: FaDatabase, level: 'intermediate' },
       { name: 'AWS S3', icon: FaAws, level: 'familiar' },
       { name: 'AWS Glue', icon: FaAws, level: 'familiar' },
       { name: 'AWS Athena', icon: FaAws, level: 'familiar' },
-      { name: 'Tableau', icon: FaChartBar, level: 'intermediate' }
     ]
   };
 
