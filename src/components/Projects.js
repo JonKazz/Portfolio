@@ -18,21 +18,30 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: 'Project Name 2',
-      description: 'Description of your second project. Highlight the key features and your role in development.',
-      technologies: ['Python', 'Django', 'PostgreSQL'],
-      github: 'https://github.com/yourusername/project2-repo',
-      demoGif: '/images/project2-demo.gif',
-      headerImage: '/images/project2-header.jpg'
+      title: 'BLOBS',
+      description: 'A game where you control a blob that can move around and eat other blobs. Eat small blobs but avoid the large ones. Made using pygame.',
+      technologies: ['Python', 'Pygame'],
+      github: 'https://github.com/JonKazz/BLOBS',
+      demoGif: '/images/blobs-demo.mov',
+      headerImage: '/images/blobs-header.png'
     },
     {
       id: 3,
       title: 'Binary Tree Visualizer',
       description: 'A visual sandbox to create, edit, and traverse binary trees for learning purposes. Made using pygame.',
-      technologies: ['JavaScript', 'React', 'Node.js'],
+      technologies: ['Python', 'Pygame'],
       github: 'https://github.com/JonKazz/BinaryTreeVisualizer',
       demoGif: '/images/btv-demo.gif',
       headerImage: '/images/btv-header.png'
+    },
+    {
+      id: 4,
+      title: 'NFL Data Scraper',
+      description: 'Scrapes raw NFL data from ProFootballReference.com. Transformes, organizes, an  d stores it in a PostgreSQL database. Can retrieve yearly team statistics, game statistics, player statstics, player profiles, and more',
+      technologies: ['Python', 'Pandas', 'BeautifulSoup', 'PostgreSQL'],
+      github: 'https://github.com/JonKazz/NFL-DataCollector',
+      demoGif: '/images/nflscraper-demo.gif',
+      headerImage: '/images/nflscraper-header.png'
     }
   ];
 
@@ -139,7 +148,20 @@ const Projects = () => {
                 </button>
               </div>
               <div className="demo-content">
-                <img src={selectedDemo} alt="Project Demo" />
+                {selectedDemo.endsWith('.mov') || selectedDemo.endsWith('.mp4') ? (
+                  <video 
+                    src={selectedDemo} 
+                    controls 
+                    autoPlay 
+                    muted 
+                    loop
+                    style={{ maxWidth: '100%', height: 'auto' }}
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                ) : (
+                  <img src={selectedDemo} alt="Project Demo" />
+                )}
               </div>
             </motion.div>
           </motion.div>
