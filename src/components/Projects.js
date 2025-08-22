@@ -37,10 +37,9 @@ const Projects = () => {
     {
       id: 4,
       title: 'NFL Data Scraper',
-      description: 'Scrapes raw NFL data from ProFootballReference.com. Transformes, organizes, an  d stores it in a PostgreSQL database. Can retrieve yearly team statistics, game statistics, player statstics, player profiles, and more',
-      technologies: ['Python', 'Pandas', 'BeautifulSoup', 'PostgreSQL'],
+      description: 'Scrapes raw NFL data from ProFootballReference.com. Transformes, organizes, and stores it in a PostgreSQL database. Can retrieve yearly team statistics, game statistics, player statstics, player profiles, and more',
+      technologies: ['Python', 'Pandas', 'BeautifulSoup', 'SQLAlchemy', 'PostgreSQL'],
       github: 'https://github.com/JonKazz/NFL-DataCollector',
-      demoGif: '/images/nflscraper-demo.gif',
       headerImage: '/images/nflscraper-header.png'
     }
   ];
@@ -108,12 +107,14 @@ const Projects = () => {
                   <a href={project.github} className="project-link">
                     <FaGithub /> Code
                   </a>
-                  <button 
-                    className="project-link demo-btn"
-                    onClick={() => setSelectedDemo(project.demoGif)}
-                  >
-                    <FaPlay /> Live Demo
-                  </button>
+                  {project.demoGif && (
+                    <button 
+                      className="project-link demo-btn"
+                      onClick={() => setSelectedDemo(project.demoGif)}
+                    >
+                      <FaPlay /> Live Demo
+                    </button>
+                  )}
                 </div>
               </div>
             </motion.div>
