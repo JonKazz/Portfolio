@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaCode, FaMobile, FaLaptopCode, FaGithub, FaPlay, FaTimes } from 'react-icons/fa';
+import { FaGithub, FaPlay, FaTimes } from 'react-icons/fa';
 import './Projects.css';
 
 const Projects = () => {
@@ -9,6 +9,22 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: 'EU Parliament Debate Clustering',
+      description: 'Topic clustering on European Union parliamentary debates from 2022 using machine learning techniques. The goal is to identify distinct thematic clusters within parliamentary discussions to understand the main topics of debate.',
+      technologies: ['Python', 'Pandas', 'Scikit-learn', 'Matplotlib'],
+      github: 'https://github.com/JonKazz/EU-Parlimentary-Debate-Clustering',
+      headerImage: '/images/debateclustering-header.png'
+    },
+    {
+      id: 2,
+      title: 'NFL Data Scraper',
+      description: 'Scrapes raw NFL data from ProFootballReference.com. Transformes, organizes, and stores it in a PostgreSQL database. Can retrieve yearly team statistics, game statistics, player statstics, player profiles, and more',
+      technologies: ['Python', 'Pandas', 'BeautifulSoup', 'SQLAlchemy', 'PostgreSQL'],
+      github: 'https://github.com/JonKazz/NFL-DataCollector',
+      headerImage: '/images/nflscraper-header.png'
+    },
+    {
+      id: 3,
       title: 'Algorithmic Pathfinder',
       description: 'A visual sandbox for learning BFS, DFS, and A* pathfinding algorithms. Built in Rust with Macroquad.',
       technologies: ['Rust', 'Macroquad'],
@@ -17,7 +33,7 @@ const Projects = () => {
       headerImage: '/images/rustalgo-header.png'
     },
     {
-      id: 2,
+      id: 4,
       title: 'BLOBS',
       description: 'A game where you control a blob that can move around and eat other blobs. Eat small blobs but avoid the large ones. Made using pygame.',
       technologies: ['Python', 'Pygame'],
@@ -26,7 +42,7 @@ const Projects = () => {
       headerImage: '/images/blobs-header.png'
     },
     {
-      id: 3,
+      id: 5,
       title: 'Binary Tree Visualizer',
       description: 'A visual sandbox to create, edit, and traverse binary trees for learning purposes. Made using pygame.',
       technologies: ['Python', 'Pygame'],
@@ -35,12 +51,12 @@ const Projects = () => {
       headerImage: '/images/btv-header.png'
     },
     {
-      id: 4,
-      title: 'NFL Data Scraper',
-      description: 'Scrapes raw NFL data from ProFootballReference.com. Transformes, organizes, and stores it in a PostgreSQL database. Can retrieve yearly team statistics, game statistics, player statstics, player profiles, and more',
-      technologies: ['Python', 'Pandas', 'BeautifulSoup', 'SQLAlchemy', 'PostgreSQL'],
-      github: 'https://github.com/JonKazz/NFL-DataCollector',
-      headerImage: '/images/nflscraper-header.png'
+      id: 6,
+      title: 'Chess Endgame Model',
+      description: 'Machine learning model that predicts the minimum number of moves to win in King+Rook vs King chess endgames. Achieves 98% accuracy using LightGBM.',
+      technologies: ['Python', 'Numpy', 'Pandas', 'Scikit-learn', 'Matplotlib', 'Seaborn', 'LightGBM'],
+      github: 'https://github.com/JonKazz/ChessEndgameModel',
+      headerImage: '/images/chessendgame-header.png'
     }
   ];
 
