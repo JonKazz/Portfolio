@@ -60,7 +60,7 @@ const Footer = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <p>&copy; 2024 Jonathan Kazmaier. All rights reserved.</p>
+          <p>&copy; 2025 Jonathan Kazmaier. All rights reserved.</p>
         </motion.div>
       </div>
     </footer>

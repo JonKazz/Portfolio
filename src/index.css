@@ -12,7 +12,7 @@ body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
   color: #e2e8f0;
-  background-color: #0f172a;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 25%, #2a2a2a 75%, #3a3a3a 100%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -27,14 +27,14 @@ code {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1e293b;
+  background: #1a1a1a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #475569;
+  background: linear-gradient(180deg, #4a4a4a, #6a6a6a);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #64748b;
+  background: linear-gradient(180deg, #5a5a5a, #7a7a7a);
 } 

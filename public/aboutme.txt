@@ -1,0 +1,14 @@
+I'm a junior Computer Science student at the University of Kansas with 4 years of 
+programming experience and a passion for data engineering. My journey in technology 
+has equipped me with strong problem-solving skills and a comprehensive foundation in software development.
+
+My expertise lies in data engineering, where I have hands-on experience in 
+data scraping, pipeline development, data analysis, and storage solutions. 
+I've worked extensively with Python for data manipulation, built robust data pipelines using modern tools, 
+and applied fundamental machine learning concepts to real-world problems. My experience spans from web 
+scraping and data collection to building scalable data storage solutions and creating analytical dashboards.
+
+I spent a semester studying abroad in Europe, where I had the incredible 
+opportunity to visit 18 countries while maintaining perfect grades. 
+This experience not only broadened my global perspective but also 
+demonstrated my ability to balance academic excellence with exploration and cultural immersion.

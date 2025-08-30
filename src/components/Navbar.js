@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEye, FaDownload } from 'react-icons/fa';
 import './Navbar.css';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -16,20 +15,24 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
-
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-    closeMenu();
+  };
+
+  const openResume = () => {
+    window.open('/resume.pdf', '_blank');
+  };
+
+  const downloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/resume.pdf';
+    link.download = 'Jonathan_Kazmaier_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -39,59 +42,97 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="nav-container">
-        <motion.div
-          className="nav-logo"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <a href="#home" onClick={() => scrollToSection('home')}>
-            JK
-          </a>
-        </motion.div>
+      <div className="navbar-container">
+        {/* Left Side - Initials and Social Icons */}
+        <div className="navbar-left">
+          <motion.div
+            className="navbar-initials"
+            whileTap={{ scale: 0.98 }}
+          >
+            <a href="#home" onClick={() => scrollToSection('home')}>
+              JK
+            </a>
+          </motion.div>
+          
+          <div className="social-icons">
+            <motion.a
+              href="https://github.com/yourusername"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon github"
+              whileTap={{ scale: 0.98 }}
+            >
+              <FaGithub />
+            </motion.a>
+            
+            <motion.a
+              href="https://linkedin.com/in/yourusername"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon linkedin"
+              whileTap={{ scale: 0.98 }}
+            >
+              <FaLinkedin />
+            </motion.a>
+          </div>
+        </div>
 
-        <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
-          <li className="nav-item">
-            <a
-              href="#home"
-              className="nav-link"
-              onClick={() => scrollToSection('home')}
-            >
-              Home
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              href="#about"
-              className="nav-link"
+        {/* Right Side - Navigation and Resume */}
+        <div className="navbar-right">
+          <div className="nav-buttons">
+            <motion.button
+              className="nav-btn"
               onClick={() => scrollToSection('about')}
+              whileTap={{ scale: 0.98 }}
             >
-              About
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              href="#skills"
-              className="nav-link"
+              About Me
+            </motion.button>
+            
+            <motion.button
+              className="nav-btn"
+              onClick={() => scrollToSection('experience')}
+              whileTap={{ scale: 0.98 }}
+            >
+              Experience
+            </motion.button>
+            
+            <motion.button
+              className="nav-btn"
               onClick={() => scrollToSection('skills')}
+              whileTap={{ scale: 0.98 }}
             >
               Skills
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              href="#projects"
-              className="nav-link"
+            </motion.button>
+            
+            <motion.button
+              className="nav-btn"
               onClick={() => scrollToSection('projects')}
+              whileTap={{ scale: 0.98 }}
             >
               Projects
-            </a>
-          </li>
-
-        </ul>
-
-        <div className="hamburger" onClick={toggleMenu}>
-          {isOpen ? <FaTimes /> : <FaBars />}
+            </motion.button>
+          </div>
+          
+          <div className="resume-section">
+            <span className="resume-label">Resume</span>
+            <motion.button
+              className="resume-btn view"
+              onClick={openResume}
+              whileTap={{ scale: 0.98 }}
+            >
+              <FaEye />
+              View
+            </motion.button>
+            
+            <motion.button
+              className="resume-btn download"
+              onClick={downloadResume}
+              whileTap={{ scale: 0.98 }}
+            >
+              <FaDownload />
+              Download
+            </motion.button>
+          </div>
         </div>
       </div>
     </motion.nav>

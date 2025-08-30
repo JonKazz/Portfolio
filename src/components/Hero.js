@@ -26,7 +26,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Hi, I'm <span className="highlight">Jonathan Kazmaier</span>
+            <span className="highlight">Jonathan Kazmaier</span>
           </motion.h1>
           
           <motion.p
@@ -35,7 +35,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Computer Science Student at the University of Kansas
+            Software Engineer in Kansas City
           </motion.p>
           
       

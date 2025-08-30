@@ -78,15 +78,7 @@ const Projects = () => {
   return (
     <section id="projects" className="projects">
       <div className="container">
-        <motion.h2
-          className="section-title"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          My Projects
-        </motion.h2>
+        <h2>My Projects</h2>
         
         <motion.div
           className="projects-grid"

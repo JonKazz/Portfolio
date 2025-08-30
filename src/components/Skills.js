@@ -13,38 +13,39 @@ import './Skills.css';
 
 const Skills = () => {
   const skills = {
-    'Languages & Core Tech': [
+    'Languages': [
       { name: 'Python', icon: FaPython, level: 'proficient' },
       { name: 'SQL', icon: FaDatabase, level: 'proficient' },
       { name: 'SOQL', icon: FaDatabase, level: 'proficient' },
+      { name: 'CSS', icon: FaCss3Alt, level: 'proficient' },
+      { name: 'HTML', icon: FaHtml5, level: 'proficient' },
       { name: 'Java', icon: FaJava, level: 'intermediate' },
       { name: 'JavaScript', icon: FaJs, level: 'intermediate' },
       { name: 'Apex', icon: FaCode, level: 'intermediate' },
-      { name: 'CSS', icon: FaCss3Alt, level: 'proficient' },
-      { name: 'HTML', icon: FaHtml5, level: 'proficient' },
+      { name: 'Rust', icon: FaCode, level: 'intermediate' },
       { name: 'C', icon: FaCode, level: 'familiar' },
-      { name: 'C++', icon: FaCode, level: 'familiar' },
-      { name: 'Rust', icon: FaCode, level: 'intermediate' }
+      { name: 'C++', icon: FaCode, level: 'familiar' }
     ],
-    'Frameworks & Libraries': [
-      { name: 'Spring Boot', icon: FaJava, level: 'intermediate' },
+    'Libraries': [
       { name: 'Pandas', icon: FaPython, level: 'proficient' },
       { name: 'Beautiful Soup', icon: FaPython, level: 'proficient' },
-      { name: 'Selenium', icon: FaSearch, level: 'familiar' },
+      { name: 'Spring Boot', icon: FaJava, level: 'intermediate' },
       { name: 'SQLAlchemy', icon: FaDatabase, level: 'intermediate' },
       { name: 'NumPy', icon: FaPython, level: 'intermediate' },
       { name: 'Scikit Learn', icon: FaBrain, level: 'intermediate' },
-      { name: 'ReactJS', icon: FaJs, level: 'intermediate' }
+      { name: 'ReactJS', icon: FaJs, level: 'intermediate' },
+      { name: 'Selenium', icon: FaSearch, level: 'familiar' }
     ],
-    'DevOps & Tools': [
+    'Frameworks': [
       { name: 'Git', icon: FaGithub, level: 'proficient' },
       { name: 'GitHub', icon: FaGithub, level: 'proficient' },
+      { name: 'VSCode', icon: FaCode, level: 'proficient' },
       { name: 'Cursor', icon: FaCode, level: 'proficient' },
-      { name: 'Salesforce', icon: FaCloud, level: 'familiar' },
       { name: 'PostgreSQL', icon: FaDatabase, level: 'intermediate' },
+      { name: 'Salesforce', icon: FaCloud, level: 'familiar' },
       { name: 'AWS S3', icon: FaAws, level: 'familiar' },
       { name: 'AWS Glue', icon: FaAws, level: 'familiar' },
-      { name: 'AWS Athena', icon: FaAws, level: 'familiar' },
+      { name: 'AWS Athena', icon: FaAws, level: 'familiar' }
     ]
   };
 
@@ -66,12 +67,24 @@ const Skills = () => {
   return (
     <section id="skills" className="skills section">
       <div className="container">
-        <div className="section-heading">
+        <motion.div 
+          className="section-heading-skills"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <h2>My Skills</h2>
           <div className="underline"></div>
-        </div>
+        </motion.div>
         
-        <div className="skills-legend">
+        <motion.div 
+          className="skills-legend"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           <div className="legend-item">
             <div className="legend-dot proficient"></div>
             <span>Proficient</span>
@@ -84,7 +97,7 @@ const Skills = () => {
             <div className="legend-dot familiar"></div>
             <span>Familiar</span>
           </div>
-        </div>
+        </motion.div>
         
         <motion.div
           className="skills-content"
@@ -101,10 +114,9 @@ const Skills = () => {
             >
               <div className="category-header">
                 <div className="category-icon">
-                  {category === 'Languages & Core Tech' && <FaCode />}
-                  {category === 'Frameworks & Libraries' && <FaLayerGroup />}
-                  {category === 'Data Science & Analytics' && <FaChartBar />}
-                  {category === 'DevOps & Tools' && <FaTools />}
+                  {category === 'Languages' && <FaCode />}
+                  {category === 'Libraries' && <FaLayerGroup />}
+                  {category === 'Frameworks' && <FaTools />}
                 </div>
                 <h3>{category}</h3>
               </div>
@@ -114,8 +126,10 @@ const Skills = () => {
                     key={skill.name}
                     className={`skill-tag ${skill.name.includes('AWS') || skill.name.includes('EC2') || skill.name.includes('SQS') || skill.name.includes('SES') || skill.name.includes('Lambda') || skill.name.includes('RDS') || skill.name.includes('Elastic') || skill.name.includes('IAM') || skill.name.includes('CloudWatch') ? 'aws-service' : ''}`}
                     data-level={skill.level}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    viewport={{ once: true }}
                   >
                     <skill.icon />
                     {skill.name}

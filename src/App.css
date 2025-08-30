@@ -9,7 +9,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 30%, #dee2e6 70%, #ced4da 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,19 +18,20 @@
 
 .loading-content {
   text-align: center;
-  color: white;
+  color: #0051BA;
 }
 
 .loading-logo {
   font-size: 4rem;
   font-weight: 700;
-  color: #667eea;
+  color: #0051BA;
   margin-bottom: 1rem;
+  text-shadow: 0 0 20px rgba(0, 81, 186, 0.3);
 }
 
 .loading-text {
   font-size: 1.2rem;
-  color: #cbd5e1;
+  color: #0051BA;
   letter-spacing: 2px;
 }
 
@@ -58,7 +59,7 @@
   transform: translateX(-50%);
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, #667eea, #764ba2);
+  background: linear-gradient(90deg, #e0e0e0, #b0b0b0);
   border-radius: 2px;
 }
 
@@ -77,25 +78,26 @@
 }
 
 .btn-primary {
-  background: #fbbf24;
-  color: #1a202c;
+  background: linear-gradient(135deg, #e0e0e0, #b0b0b0);
+  color: #1a1a1a;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .btn-primary:hover {
-  background: #f59e0b;
+  background: linear-gradient(135deg, #f0f0f0, #c0c0c0);
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(251, 191, 36, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
 .btn-secondary {
   background: transparent;
   color: white;
-  border: 2px solid white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .btn-secondary:hover {
-  background: white;
-  color: #667eea;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
   transform: translateY(-2px);
 }
 
