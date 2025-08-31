@@ -7,7 +7,7 @@ import {
   FaCalculator, FaRandom, FaFlask, FaVectorSquare, FaChartArea, 
   FaCogs, FaClock, FaTools, FaDocker, FaGithub, FaCodeBranch, 
   FaJenkins, FaAws, FaCloud, FaExchangeAlt, FaEnvelope, FaUserLock, 
-  FaPaperPlane, FaBook, FaPython, FaJira
+  FaPaperPlane, FaBook, FaPython, FaJira, FaRust
 } from 'react-icons/fa';
 import './Skills.css';
 
@@ -16,36 +16,31 @@ const Skills = () => {
     'Languages': [
       { name: 'Python', icon: FaPython, level: 'proficient' },
       { name: 'SQL', icon: FaDatabase, level: 'proficient' },
-      { name: 'SOQL', icon: FaDatabase, level: 'proficient' },
       { name: 'CSS', icon: FaCss3Alt, level: 'proficient' },
       { name: 'HTML', icon: FaHtml5, level: 'proficient' },
-      { name: 'Java', icon: FaJava, level: 'intermediate' },
-      { name: 'JavaScript', icon: FaJs, level: 'intermediate' },
-      { name: 'Apex', icon: FaCode, level: 'intermediate' },
-      { name: 'Rust', icon: FaCode, level: 'intermediate' },
-      { name: 'C', icon: FaCode, level: 'familiar' },
+      { name: 'JavaScript', icon: FaJs, level: 'proficient' },
+      { name: 'Java', icon: FaJava, level: 'proficient' },
+      { name: 'SOQL', icon: FaDatabase, level: 'intermediate' },
+      { name: 'Rust', icon: FaRust, level: 'intermediate' },
       { name: 'C++', icon: FaCode, level: 'familiar' }
     ],
     'Libraries': [
-      { name: 'Pandas', icon: FaPython, level: 'proficient' },
       { name: 'Beautiful Soup', icon: FaPython, level: 'proficient' },
+      { name: 'SQLAlchemy', icon: FaDatabase, level: 'proficient' },
+      { name: 'Matplotlib', icon: FaSearch, level: 'proficient' },
       { name: 'Spring Boot', icon: FaJava, level: 'intermediate' },
-      { name: 'SQLAlchemy', icon: FaDatabase, level: 'intermediate' },
       { name: 'NumPy', icon: FaPython, level: 'intermediate' },
       { name: 'Scikit Learn', icon: FaBrain, level: 'intermediate' },
-      { name: 'ReactJS', icon: FaJs, level: 'intermediate' },
-      { name: 'Selenium', icon: FaSearch, level: 'familiar' }
+      { name: 'ReactJS', icon: FaJs, level: 'intermediate' }
     ],
     'Frameworks': [
       { name: 'Git', icon: FaGithub, level: 'proficient' },
-      { name: 'GitHub', icon: FaGithub, level: 'proficient' },
       { name: 'VSCode', icon: FaCode, level: 'proficient' },
       { name: 'Cursor', icon: FaCode, level: 'proficient' },
-      { name: 'PostgreSQL', icon: FaDatabase, level: 'intermediate' },
-      { name: 'Salesforce', icon: FaCloud, level: 'familiar' },
+      { name: 'PostgreSQL', icon: FaDatabase, level: 'proficient' },
+      { name: 'Salesforce', icon: FaCloud, level: 'intermediate' },
       { name: 'AWS S3', icon: FaAws, level: 'familiar' },
-      { name: 'AWS Glue', icon: FaAws, level: 'familiar' },
-      { name: 'AWS Athena', icon: FaAws, level: 'familiar' }
+      { name: 'AWS RDS', icon: FaAws, level: 'familiar' }
     ]
   };
 
