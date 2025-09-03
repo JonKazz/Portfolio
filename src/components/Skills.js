@@ -20,14 +20,17 @@ const Skills = () => {
       { name: 'HTML', icon: FaHtml5, level: 'proficient' },
       { name: 'JavaScript', icon: FaJs, level: 'proficient' },
       { name: 'Java', icon: FaJava, level: 'proficient' },
+      { name: 'Apex', icon: FaJava, level: 'intermediate' },
       { name: 'SOQL', icon: FaDatabase, level: 'intermediate' },
       { name: 'Rust', icon: FaRust, level: 'intermediate' },
-      { name: 'C++', icon: FaCode, level: 'familiar' }
+      { name: 'C++', icon: FaCode, level: 'familiar' },
+      { name: 'C', icon: FaCode, level: 'familiar' }
     ],
     'Libraries': [
       { name: 'Beautiful Soup', icon: FaPython, level: 'proficient' },
       { name: 'SQLAlchemy', icon: FaDatabase, level: 'proficient' },
       { name: 'Matplotlib', icon: FaSearch, level: 'proficient' },
+      { name: 'Pandas', icon: FaSearch, level: 'proficient' },
       { name: 'Spring Boot', icon: FaJava, level: 'intermediate' },
       { name: 'NumPy', icon: FaPython, level: 'intermediate' },
       { name: 'Scikit Learn', icon: FaBrain, level: 'intermediate' },
@@ -39,8 +42,10 @@ const Skills = () => {
       { name: 'Cursor', icon: FaCode, level: 'proficient' },
       { name: 'PostgreSQL', icon: FaDatabase, level: 'proficient' },
       { name: 'Salesforce', icon: FaCloud, level: 'intermediate' },
-      { name: 'AWS S3', icon: FaAws, level: 'familiar' },
-      { name: 'AWS RDS', icon: FaAws, level: 'familiar' }
+      { name: 'Supabase', icon: FaCloud, level: 'intermediate' },
+      { name: 'Vercel', icon: FaCloud, level: 'intermediate' },
+      { name: 'Render', icon: FaCloud, level: 'intermediate' },
+      { name: 'AWS S3', icon: FaAws, level: 'familiar' }
     ]
   };
 
