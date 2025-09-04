@@ -1,10 +1,21 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaGithub, FaPlay, FaTimes } from 'react-icons/fa';
+import { FaGithub, FaPlay, FaTimes, FaExternalLinkAlt } from 'react-icons/fa';
 import './Projects.css';
 
 const Projects = () => {
   const [selectedDemo, setSelectedDemo] = useState(null);
+
+  const premierProject = {
+    id: 0,
+    title: 'NFL-Stathead.com',
+    description: 'A full-stack web application for exploring NFL data, providing detailed season, game, team, and player statistics across multiple years. The project integrates a React frontend for interactive data visualization, a Spring Boot backend exposing RESTful APIs, and a PostgreSQL database (hosted on Supabase) for persistent storage. Deployed with Docker containers on Render and Vercel, the system enables users to browse all types of metrics through a seamless and scalable interface.',
+    technologies: ['React', 'Spring Boot', 'PostgreSQL', 'JavaScript', 'Java'],
+    github: 'https://github.com/JonKazz/NFL-Fullstack-Database',
+    website: 'https://nfl-stathead.com',
+    headerImage: '/images/nflstathead-header.png',
+    isPremier: true
+  };
 
   const projects = [
     {
@@ -79,6 +90,43 @@ const Projects = () => {
     <section id="projects" className="projects">
       <div className="container">
         <h2>My Projects</h2>
+        
+        {/* Premier Project */}
+        <motion.div
+          className="premier-project"
+          variants={cardVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.3 }}
+        >
+          <div className="project-image">
+            <img 
+              src={premierProject.headerImage} 
+              alt={premierProject.title}
+              className="project-header-img"
+            />
+          </div>
+          <div className="project-content">
+            <h3 className="project-title">{premierProject.title}</h3>
+            <p className="project-description">{premierProject.description}</p>
+            <div className="project-tech">
+              {premierProject.technologies.map((tech) => (
+                <span key={tech} className="tech-tag">
+                  {tech}
+                </span>
+              ))}
+            </div>
+            <div className="project-links">
+              <a href={premierProject.github} className="project-link">
+                <FaGithub /> Code
+              </a>
+              <a href={premierProject.website} className="project-link" target="_blank" rel="noopener noreferrer">
+                <FaExternalLinkAlt /> Live Site
+              </a>
+            </div>
+          </div>
+        </motion.div>
         
         <motion.div
           className="projects-grid"
