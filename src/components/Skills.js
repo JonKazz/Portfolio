@@ -2,12 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   FaCode, FaDatabase, FaJava, FaJs, FaHtml5, FaCss3Alt, FaSearch, 
-  FaLayerGroup, FaBrain, FaChartLine, FaCube, FaVial, FaCheckCircle, 
-  FaNetworkWired, FaCubes, FaChartBar, FaProjectDiagram, FaTree, 
-  FaCalculator, FaRandom, FaFlask, FaVectorSquare, FaChartArea, 
-  FaCogs, FaClock, FaTools, FaDocker, FaGithub, FaCodeBranch, 
-  FaJenkins, FaAws, FaCloud, FaExchangeAlt, FaEnvelope, FaUserLock, 
-  FaPaperPlane, FaBook, FaPython, FaJira, FaRust
+  FaLayerGroup, FaBrain, FaTools, FaGithub, FaPython, FaRust, FaCloud, FaAws
 } from 'react-icons/fa';
 import './Skills.css';
 
