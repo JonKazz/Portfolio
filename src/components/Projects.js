@@ -5,17 +5,30 @@ import './Projects.css';
 
 const Projects = () => {
   const [selectedDemo, setSelectedDemo] = useState(null);
+  const [showTooltip, setShowTooltip] = useState(null);
 
-  const premierProject = {
-    id: 0,
-    title: 'NFL-Stathead.com',
-    description: 'A full-stack web application for exploring NFL data, providing detailed season, game, team, and player statistics across multiple years. The project integrates a React frontend for interactive data visualization, a Spring Boot backend exposing RESTful APIs, and a PostgreSQL database (hosted on Supabase) for persistent storage. Deployed with Docker containers on Render and Vercel, the system enables users to browse all types of metrics through a seamless and scalable interface.',
-    technologies: ['React', 'Spring Boot', 'PostgreSQL', 'JavaScript', 'Java'],
-    github: 'https://github.com/JonKazz/NFL-Fullstack-Database',
-    website: 'https://nfl-stathead.com',
-    headerImage: '/images/nflstathead-header.png',
-    isPremier: true
-  };
+  const premierProjects = [
+    {
+      id: 0,
+      title: 'Real-Time Weather Forecasting and Trading Engine',
+      description: 'A real-time weather prediction and automated trading system focused on temperature futures on Kalshi, a federally regulated event futures exchange. The system ingestes live weather data from multiple sources, applies time-series and probabilistic forecasting models to predict daily high temperatures, and executes trades based on deviations between forecasted and market-implied outcomes. The project combines data engineering, quantitative modeling, and algorithmic trading to explore how predictive analytics can create an edge in weather-driven financial markets.',
+      technologies: ['Python', 'PostgreSQL', 'SQL', 'Kalshi API'],
+      github: '#',
+      website: 'https://kalshi.com/?category=climate&tag=daily-temperature',
+      headerImage: '/images/kalshi-header.png',
+      isPremier: true
+    },
+    {
+      id: 1,
+      title: 'NFL-Stathead.com',
+      description: 'A full-stack web application for exploring NFL data, providing detailed season, game, team, and player statistics across multiple years. The project integrates a React frontend for interactive data visualization, a Spring Boot backend exposing RESTful APIs, and a PostgreSQL database (hosted on Supabase) for persistent storage. Deployed with Docker containers on Render and Vercel, the system enables users to browse all types of metrics through a seamless and scalable interface.',
+      technologies: ['React', 'Spring Boot', 'PostgreSQL', 'JavaScript', 'Java'],
+      github: 'https://github.com/JonKazz/NFL-Fullstack-Database',
+      website: 'https://nfl-stathead.com',
+      headerImage: '/images/nflstathead-header.png',
+      isPremier: true
+    }
+  ];
 
   const projects = [
     {
@@ -91,42 +104,72 @@ const Projects = () => {
       <div className="container">
         <h2>My Projects</h2>
         
-        {/* Premier Project */}
-        <motion.div
-          className="premier-project"
-          variants={cardVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.3 }}
-        >
-          <div className="project-image">
-            <img 
-              src={premierProject.headerImage} 
-              alt={premierProject.title}
-              className="project-header-img"
-            />
-          </div>
-          <div className="project-content">
-            <h3 className="project-title">{premierProject.title}</h3>
-            <p className="project-description">{premierProject.description}</p>
-            <div className="project-tech">
-              {premierProject.technologies.map((tech) => (
-                <span key={tech} className="tech-tag">
-                  {tech}
-                </span>
-              ))}
+        {/* Premier Projects */}
+        {premierProjects.map((premierProject) => (
+          <motion.div
+            key={premierProject.id}
+            className="premier-project"
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="project-image">
+              <img 
+                src={premierProject.headerImage} 
+                alt={premierProject.title}
+                className="project-header-img"
+              />
             </div>
-            <div className="project-links">
-              <a href={premierProject.github} className="project-link">
-                <FaGithub /> Code
-              </a>
-              <a href={premierProject.website} className="project-link" target="_blank" rel="noopener noreferrer">
-                <FaExternalLinkAlt /> Live Site
-              </a>
+            <div className="project-content">
+              <h3 className="project-title">{premierProject.title}</h3>
+              <p className="project-description">{premierProject.description}</p>
+              <div className="project-tech">
+                {premierProject.technologies.map((tech) => (
+                  <span key={tech} className="tech-tag">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <div className="project-links">
+                {premierProject.github === '#' ? (
+                  <div 
+                    className="tooltip-wrapper"
+                    onMouseEnter={() => setShowTooltip(premierProject.id)}
+                    onMouseLeave={() => setShowTooltip(null)}
+                  >
+                    <span className="project-link project-link-disabled">
+                      <FaGithub /> Code
+                    </span>
+                    <AnimatePresence>
+                      {showTooltip === premierProject.id && (
+                        <motion.div
+                          className="custom-tooltip"
+                          initial={{ opacity: 0, y: 5 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 5 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          Due to the nature of this project, showcasing the trading system could allow others to exploit it
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ) : (
+                  <a href={premierProject.github} className="project-link">
+                    <FaGithub /> Code
+                  </a>
+                )}
+                {premierProject.website && premierProject.website !== '#' && (
+                  <a href={premierProject.website} className="project-link" target="_blank" rel="noopener noreferrer">
+                    <FaExternalLinkAlt /> Live Site
+                  </a>
+                )}
+              </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        ))}
         
         <motion.div
           className="projects-grid"
