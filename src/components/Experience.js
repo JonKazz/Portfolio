@@ -1,24 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaBriefcase, FaGraduationCap, FaGlobe, FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaBriefcase, FaGraduationCap, FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import './Experience.css';
 
 const Experience = () => {
   const experiences = [
     {
       id: 1,
-      title: 'Study Abroad Program',
-      company: 'TUGraz',
-      location: 'Graz, Austria',
-      period: 'March 2025 - July 2025',
-      type: 'Academic',
-      compensation: 'Educational',
-      icon: FaGlobe,
-      description: 'Comprehensive study abroad experience across multiple European countries.',
+      title: 'Power Marketing Analyst Intern',
+      company: 'Energy Transfer',
+      location: 'Overland Park, Kansas',
+      period: 'May 2026 - Present',
+      type: 'Internship',
+      icon: FaBriefcase,
+      description: 'Analytics and forecasting internship supporting proprietary power trading across wholesale electricity markets.',
       bulletPoints: [
-        'Worked an international program coordinator position in leadership, organizing and leading groups of 10-35 Erasmus students on international trips throughout Europe',
-        'Visited 18 countries across Europe, experiencing diverse cultures, educational systems, and international perspectives',
-        'Met people from all types of backgrounds and perspectives, broadening my worldview and learning valuable lessons about global collaboration and cultural understanding'
+        'Developed custom analytics platforms, interactive dashboards, and automated reporting tools supporting proprietary trading across the ERCOT, PJM, MISO, and SPP wholesale electricity markets',
+        'Built short and long-term forecasting models for nodal prices, forward power prices, load, and generation mix using weather and historical market data to support speculative trading decisions'
       ],
       showTechStack: false
     },
